@@ -1,0 +1,74 @@
+{
+  "name": "@munin/core-react-native",
+  "version": "0.1.0",
+  "description": "React Native-compatible storage backends for @munin/core",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./expo-sqlite": {
+      "types": "./dist/expo-sqlite.d.ts",
+      "import": "./dist/expo-sqlite.js"
+    },
+    "./firebase-client": {
+      "types": "./dist/firebase-client.d.ts",
+      "import": "./dist/firebase-client.js"
+    },
+    "./async-storage": {
+      "types": "./dist/async-storage.d.ts",
+      "import": "./dist/async-storage.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "munin",
+    "react-native",
+    "expo",
+    "sqlite",
+    "firebase",
+    "storage"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "~5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "peerDependencies": {
+    "@munin/core": "^0.1.0",
+    "@react-native-async-storage/async-storage": ">=2.0.0",
+    "expo-sqlite": ">=15.0.0",
+    "firebase": ">=10.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@munin/core": {
+      "optional": false
+    },
+    "@react-native-async-storage/async-storage": {
+      "optional": true
+    },
+    "expo-sqlite": {
+      "optional": true
+    },
+    "firebase": {
+      "optional": true
+    }
+  },
+  "packageManager": "yarn@4.6.0",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
