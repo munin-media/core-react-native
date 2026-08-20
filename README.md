@@ -1,6 +1,6 @@
-# @munin/core-react-native
+# @munin-media/core-react-native
 
-React Native-compatible storage backends implementing `@munin/core`'s `StorageBackend` interface.
+React Native-compatible storage backends implementing `@munin-media/core`'s `StorageBackend` interface.
 
 ## Backends
 
@@ -13,7 +13,7 @@ React Native-compatible storage backends implementing `@munin/core`'s `StorageBa
 ## Installation
 
 ```bash
-yarn add @munin/core-react-native @munin/core
+yarn add @munin-media/core-react-native @munin-media/core
 ```
 
 Then install the backend you need:
@@ -32,8 +32,8 @@ npx expo install @react-native-async-storage/async-storage
 ## Usage
 
 ```typescript
-import { createMunin } from '@munin/core';
-import { ExpoSQLiteBackend } from '@munin/core-react-native/expo-sqlite';
+import { createMunin } from '@munin-media/core';
+import { ExpoSQLiteBackend } from '@munin-media/core-react-native/expo-sqlite';
 
 const munin = createMunin({
   storage: new ExpoSQLiteBackend('myapp.db'),
@@ -45,9 +45,9 @@ const munin = createMunin({
 Each backend is a separate entry point — unused backends are not bundled:
 
 ```typescript
-import { ExpoSQLiteBackend } from '@munin/core-react-native/expo-sqlite';
-import { FirebaseClientBackend } from '@munin/core-react-native/firebase-client';
-import { AsyncStorageBackend } from '@munin/core-react-native/async-storage';
+import { ExpoSQLiteBackend } from '@munin-media/core-react-native/expo-sqlite';
+import { FirebaseClientBackend } from '@munin-media/core-react-native/firebase-client';
+import { AsyncStorageBackend } from '@munin-media/core-react-native/async-storage';
 ```
 
 ## Schema Compatibility
@@ -68,7 +68,7 @@ yarn typecheck   # tsc --noEmit
 
 | Package | Version | Required |
 |---------|---------|----------|
-| `@munin/core` | ^0.1.0 | Yes |
+| `@munin-media/core` | ^0.1.0 | Yes |
 | `expo-sqlite` | >=15.0.0 | Optional |
 | `firebase` | >=10.0.0 | Optional |
 | `@react-native-async-storage/async-storage` | >=2.0.0 | Optional |

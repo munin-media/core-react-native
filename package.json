@@ -1,7 +1,7 @@
 {
-  "name": "@munin/core-react-native",
-  "version": "0.1.0",
-  "description": "React Native-compatible storage backends for @munin/core",
+  "name": "@munin-media/core-react-native",
+  "version": "1.0.0",
+  "description": "React Native-compatible storage backends for @munin-media/core",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -48,13 +48,13 @@
     "vitest": "^3.0.0"
   },
   "peerDependencies": {
-    "@munin/core": "^0.1.0",
+    "@munin-media/core": "^1.0.0",
     "@react-native-async-storage/async-storage": ">=2.0.0",
     "expo-sqlite": ">=15.0.0",
     "firebase": ">=10.0.0"
   },
   "peerDependenciesMeta": {
-    "@munin/core": {
+    "@munin-media/core": {
       "optional": false
     },
     "@react-native-async-storage/async-storage": {
@@ -70,5 +70,12 @@
   "packageManager": "yarn@4.6.0",
   "engines": {
     "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/munin-media/munin-core-react-native.git"
   }
 }

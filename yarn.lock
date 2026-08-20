@@ -203,19 +203,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@munin/core-react-native@workspace:.":
+"@munin-media/core-react-native@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@munin/core-react-native@workspace:."
+  resolution: "@munin-media/core-react-native@workspace:."
   dependencies:
     typescript: "npm:~5.7.0"
     vitest: "npm:^3.0.0"
   peerDependencies:
-    "@munin/core": ^0.1.0
+    "@munin-media/core": ^1.0.0
     "@react-native-async-storage/async-storage": ">=2.0.0"
     expo-sqlite: ">=15.0.0"
     firebase: ">=10.0.0"
   peerDependenciesMeta:
-    "@munin/core":
+    "@munin-media/core":
       optional: false
     "@react-native-async-storage/async-storage":
       optional: true

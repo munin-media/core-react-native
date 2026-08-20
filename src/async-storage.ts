@@ -26,7 +26,7 @@ import type {
   Collection,
   ContributionEntry,
   UserDataBundle,
-} from '@munin/core';
+} from '@munin-media/core';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export class AsyncStorageBackend implements StorageBackend {

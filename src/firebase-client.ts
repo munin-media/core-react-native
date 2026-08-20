@@ -22,7 +22,7 @@ import type {
   Collection,
   ContributionEntry,
   UserDataBundle,
-} from '@munin/core';
+} from '@munin-media/core';
 import type { Firestore, DocumentSnapshot } from 'firebase/firestore';
 import {
   doc,

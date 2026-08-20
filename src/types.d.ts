@@ -1,10 +1,10 @@
 /**
- * Type declarations for @munin/core peer dependency.
- * These mirror the actual types exported by @munin/core.
+ * Type declarations for @munin-media/core peer dependency.
+ * These mirror the actual types exported by @munin-media/core.
  * When the peer dep is installed, TypeScript will use the real types.
  */
 
-declare module '@munin/core' {
+declare module '@munin-media/core' {
   export interface ProgressEntry {
     userId: string;
     titleId: string;

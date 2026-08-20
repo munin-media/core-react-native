@@ -1,7 +1,7 @@
 /**
  * Expo SQLite storage backend for local-first mobile storage.
  * Uses expo-sqlite (JSI-based synchronous SQLite) for fast, offline-capable persistence.
- * Schema mirrors the better-sqlite3 backend from @munin/core for data compatibility.
+ * Schema mirrors the better-sqlite3 backend from @munin-media/core for data compatibility.
  */
 
 import type {
@@ -14,7 +14,7 @@ import type {
   Collection,
   ContributionEntry,
   UserDataBundle,
-} from '@munin/core';
+} from '@munin-media/core';
 import type { SQLiteDatabase } from 'expo-sqlite';
 import { openDatabaseSync } from 'expo-sqlite';
 
