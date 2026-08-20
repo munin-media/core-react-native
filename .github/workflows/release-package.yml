@@ -33,7 +33,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          unset NPM_CONFIG_USERCONFIG
+          echo "@munin-media:registry=https://npm.pkg.github.com" > ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> ~/.npmrc
           yarn install
         env:
           NODE_AUTH_TOKEN: ${{ steps.app-token.outputs.token }}
