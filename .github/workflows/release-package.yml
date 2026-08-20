@@ -32,7 +32,9 @@ jobs:
           owner: munin-media
 
       - name: Install dependencies
-        run: yarn install
+        run: |
+          unset NPM_CONFIG_USERCONFIG
+          yarn install
         env:
           NODE_AUTH_TOKEN: ${{ steps.app-token.outputs.token }}
 
