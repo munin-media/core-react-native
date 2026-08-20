@@ -23,21 +23,16 @@ jobs:
       - name: Enable Corepack
         run: corepack enable
 
-      - name: Generate package read token
-        id: app-token
-        uses: actions/create-github-app-token@v1
-        with:
-          app-id: ${{ secrets.APP_ID }}
-          private-key: ${{ secrets.APP_PRIVATE_KEY }}
-          owner: munin-media
+      - name: Configure registry auth
+        run: |
+          yarn config set npmScopes.munin-media.npmRegistryServer "https://npm.pkg.github.com"
+          yarn config set npmScopes.munin-media.npmAlwaysAuth true
+          yarn config set npmScopes.munin-media.npmAuthToken "$NODE_AUTH_TOKEN"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies
-        run: |
-          echo "@munin-media:registry=https://npm.pkg.github.com" > ~/.npmrc
-          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> ~/.npmrc
-          yarn install
-        env:
-          NODE_AUTH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: yarn install
 
       - name: Build
         run: yarn build
